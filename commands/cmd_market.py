@@ -1,6 +1,7 @@
 import ast
 import discord
 from discord import Embed, Color
+from operator import itemgetter, attrgetter, methodcaller
 import STATICS
 
 def ex(args, message, client, invoke, sender):
