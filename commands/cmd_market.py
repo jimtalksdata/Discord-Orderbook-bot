@@ -25,12 +25,12 @@ def ex(args, message, client, invoke, sender):
         sendstr = """-\n:fire: **ORDERBOOK** :fire:\n\n|WTB|"""
 
         for entry in buylist:
-            sendstr = sendstr + "\n" + str(entry[1])[:-5] + " - " + str(entry[2]) + ' ' + CURRENCY + ' @ ' + str(entry[3]) + ' ' + CURRENCY2
+            sendstr = sendstr + "\n" + str(entry[1])[:-5] + " - " + str(entry[2]) + ' ' + STATICS.CURRENCY + ' @ ' + str(entry[3]) + ' ' + STATICS.CURRENCY2
 
         sendstr = sendstr + "\n\n" + "|WTS|"
 
         for entry in selllist:
-            sendstr = sendstr + "\n" + str(entry[1])[:-5] + " - " + str(entry[2]) + ' ' + CURRENCY + ' @ ' + str(entry[3]) + ' ' + CURRENCY2
+            sendstr = sendstr + "\n" + str(entry[1])[:-5] + " - " + str(entry[2]) + ' ' + STATICS.CURRENCY + ' @ ' + str(entry[3]) + ' ' + STATICS.CURRENCY2
 
         yield from client.send_message(message.channel, sendstr)
     else:
